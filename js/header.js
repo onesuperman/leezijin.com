@@ -1,6 +1,7 @@
 addHeader("header");
 function addHeader(id){
 	var text = "";
+	text += "<link rel='shortcut icon' href='../../img/favicon.ico' type='image/vnd.microsoft.icon'>";
 	text += "<link rel=\"stylesheet\" type=\"text/css\" href=\"../../css/header.css\" />";
 	text += "<div class=\"navigation-up\">";
 	text += "	<div class=\"navigation-inner\">";
