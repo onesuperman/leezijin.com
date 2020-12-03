@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="本工具可以方便大家快速对比两个文本文件中的不同之处，可以自动对两段文本比较，标注不同之处，结果清晰明了，可快速替换差异内容并将结果直接下载。">
+		<meta name="keywords" content="在线文本差异对比,文本对比,文本比较,文本比较工具,代码差异对比,内容差异对比">
+		<title>文本比较工具|子晋的工作台</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+		<script src="../../js/jquery-1.10.2.min.js"></script>
+		<!--codemirror-->
+		<link rel="stylesheet" href="../../plugs/codemirror-5.58.3/lib/codemirror.css"/>
+		<script src="../../plugs/codemirror-5.58.3/lib/codemirror.js"></script>
+		<!--引入css文件，用以支持主题-->
+		<link rel="stylesheet" href="../../plugs/codemirror-5.58.3/theme/dracula.css"/>
+		
+		<!--代码块比较-->
+		<script type="text/javascript" src="../../plugs/mergely/lib/mergely.js"></script>
+		<link rel="stylesheet" href="../../plugs/mergely/lib/mergely.css"/>
+		
+		<script src="../../js/tool/compareCode/compare_code.js"></script> 
+	</head>
+	<body>
+		<!--header-->
+		<div id="header"></div>
+		<script src="../../js/header.js"></script>
+		<div class="container"  style="margin-top: 1em;">
+			<h2>文本比较</h2>
+		</div>
+		<div>
+			<table align="center" style="width: 100%;"><tr style="border-left: 1px solid #1D1D1D; border-top:1px solid #1D1D1D;">
+				<tr style="height: 50px;">
+					<td style="width: 50%;background-color: #1a1a1a;color: #bd6969;">
+						<tt id="path-lhs"></tt> &nbsp; 
+						<a id="save-lhs" class="save-link" href="#">
+							<span class="glyphicon glyphicon-save"></span>
+							保存
+						</a>
+						<span class="dmsm">(在下面输入您的代码或文本，或直接把文件拖入到框中)</span> 
+						<span class="txtbjdel txta"><span class="glyphicon glyphicon-trash"></span> 清除内容</span>
+					</td>
+					<td style="width: 50%;background-color: #1a1a1a;color: #8bcaf3;border-left:1px solid white">
+						<tt id="path-rhs"></tt> &nbsp; 
+						<a id="save-rhs" class="save-link" href="#">
+							<span class="glyphicon glyphicon-floppy-save"></span>
+							保存
+						</a>
+						<span class="dmsm">(在下面输入您的代码或文本，或直接把文件拖入到框中)</span> 
+						<span class="txtbjdel txtb"><span class="glyphicon glyphicon-trash"></span> 清除内容</span>
+					</td>
+				</tr>
+			</table>
+			<div class="mergely-full-screen-8">
+				<div class="mergely-resizer">
+					<div id="mergely"></div>
+				</div>
+			</div>
+		</div>
+		    <script>
+		    $(document).ready(function() {
+		        // initialize mergely
+		        options = { line_numbers: true, editor_height: "400px", autoresize: false, lcs: true }
+		        $('#mergely').mergely('options', options);
+		 
+		    });
+		    l = "Q:唉我问一下我们用的这个400电话外呼的时候对方会显示几个号码呀\n\
+		A:您这边是那个上海欣荣汽车科技有限公司是吗？唉。\n\
+		Q:11300571对吧？\n\
+		A:对就是您那个件号码\n\
+		Q:哪个？你说客户是哪个方向的吗？客户是江苏的\n\
+		A:是您稍等我这边查一下我，您是外省，号码是11300571呀\n\
+		Q:你稍等一下，我马上去看一下我外呼的是哪个号码。\n\
+		A:是江苏无锡的吗？\n\
+		Q:那11300001这个是什么号码呢？\n\
+		A:上当，\n\
+		Q:其他没有了，谢谢嗯好再见。\n\
+		A:唉好。"
+		    r = "Q:唉我问一下我们用的这个400电话外呼的时候对方会显示几个号码呀\n\
+		A:您这边是那个上海欣荣汽车科技有限公司是吗？\n\
+		Q:11300571对吧？\n\
+		A:对就是您那个号码\n\
+		Q:哪个？你说客户是哪个方向的吗？客户是江苏的\n\
+		A:是您稍等我这边查一下我，您是外省，号码是11300571\n\
+		Q:你稍等一下，我马上去看一下我外省的是哪个号码。\n\
+		A:是江苏无锡的吗？\n\
+		Q:其他没有了，谢谢嗯好再见。\n\
+		A:唉好。"
+		    $('#mergely').mergely({
+		        line_numbers: true,
+		        lhs: function(setValue) {
+		            setValue(l);
+		        },
+		        rhs: function(setValue) {
+		            setValue(r);
+		        }
+		    });
+			$(".mergely-full-screen-8").removeClass("mergely-full-screen-8");
+		    </script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+html{font-size:62.5%;font-family:'helvetica neue',tahoma,arial,'hiragino sans gb','Simsun',sans-serif} 
+body,div,dl,dt,dd,ul,ol,li,h1,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr{margin:0;padding:0}
+body{line-height:1.333;font-size:12px;background:#ebebeb;}
+/* h1,h2,h3,h4,h5,h6{font-size:100%;font-family:arial,'hiragino sans gb','microsoft yahei','Simsun',sans-serif} */
+li{list-style:none}
+a:link,a:visited{text-decoration:none}
+
+
+.head-v3{position:relative;z-index:100;min-width:1000px}
+.head-v3 .navigation-inner{margin:0 auto;width:980px;position:relative}
+.navigation-up{height:60px;background:#000000}
+/* .navigation-up{height:60px;background:#cd2cb9;} */
+.navigation-up .navigation-v3{margin-left:18%;float:left;_margin-left:10px}
+.navigation-up .navigation-v3 ul{float:left}
+.navigation-up .navigation-v3 li{float:left;font:normal 16px/59px "microsoft yahei";color:#fff;height:60px;}
+.navigation-up .navigation-v3 .nav-up-selected{background:#16151c}
+.navigation-up .navigation-v3 .nav-up-selected-inpage{background:#55557f;height:60px;}
+.navigation-up .navigation-v3 .nav-up-selected-inpage:HOVER{background:#16151c}
+.navigation-up .navigation-v3 li a:HOVER{background:#16151c}
+
+.navigation-up .navigation-v3 li h2{font-weight:normal;padding:0;margin:0}
+.navigation-up .navigation-v3 li h2 a{padding:0 25px;color:#fff;display:inline-block;height:60px;line-height:60px;font-family:"microsoft yahei"}
+
+.navigation-down{position:absolute;top:60px;left:0px;width:100%;z-index: 999;}
+.navigation-down .nav-down-menu{width:100%;margin:0;background:#16151c;position:absolute;top:0px;filter:progid:DXImageTransform.Microsoft.alpha(opacity=90);filter:alpha(opacity=90);
+opacity:0.9}
+.navigation-down .nav-down-menu .navigation-down-inner{margin:auto;width:1200px;position:relative}
+.navigation-down .nav-down-menu dl{float:left;margin:18px 80px 18px 0}
+.navigation-down .menu-1 dl{margin:20px 80px 25px 0}
+.navigation-down .menu-1 dt{font:normal 16px "microsoft yahei";color:#fcd0f7;padding-bottom:10px;border-bottom:1px solid #61789e;margin-bottom:10px}
+.navigation-down .menu-1 dd a{color:#fcd0f7;font:normal 15px/30px "microsoft yahei"}
+.navigation-down .menu-1 dd a:hover{color:white}
+
+
+.navigation-down .menu-2 dd a,.navigation-down .menu-3 dd a{color:#fff;font:normal 16px "microsoft yahei"}
+
+#logo{background:#EFEDED;height: 70px;}
+#logo img{margin: 15px 0 15px 18%}
+
+.main{padding:20px;overflow:hidden;}
+.ser_box,.s_warp{padding:15px;border:solid 1px #d8d8d8;background:#ffffff;}
+.ser_box_tit,.s_warp_tit{display:block;width:100%;height:40px;line-height:40px;font-size:14px;color:#666;border-bottom:solid 1px #d8d8d8;overflow:hidden;clear:both;}
+#tool-apk,#tool-pc,#tool-web{padding:20px 0 10px;}
+#tool-apk input[type=checkbox],#tool-pc input[type=checkbox],#tool-web input[type=checkbox]{margin:0 3px 0 20px;}
+.ser_box table{margin:15px 0 10px;}
+.ser_box table td{padding:0 10px;}
+.search_btn{width:80px; height:30px;background: #25c079; color: #fff;border:0;  -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+#apk_chart,.content_con,#pc_chart,#web_chart{margin-top:20px;padding:15px;background:#fff;border:solid 1px #d8d8d8;}
+.daochu_btn{float:right;margin:20px 0 20px;width:80px; height:30px;background: #249ef3; color: #fff;border:0;  -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+
+
+.tabs{width:100%;background:#f2f2f2;}
+.tabs td,.tabs th{height:35px;text-align:center;font-size:12px;color:#666;background:#FFF;border:solid 1px #d8d8d8;}
+.tabs th{font-weight:bold;background:#f9fbfa;}
+.tabs td a{margin:0 5px;color:#0f9dec;}
+.tabs td a:hover{color:#F60;}
+.tabs td a img{margin-right:5px;vertical-align:middle;}
+.tabs td span{float:left;margin:5px;display:block;height:20px;overflow:hidden;}
+.tabs td span input{float:left;margin:3px;vertical-align:bottom;}
+.tabs td span i{float:left;font-style:normal;line-height:20px;}
+
+.s_warp{margin-top:20px;overflow:hidden;}
+.tab_list{margin:20px auto;border-collapse:separate; border-spacing:5px 20px;}
+.tab_list tr{padding:10px 0;overflow:hidden;}
+.tab_txt{width:200px;height:30px;}
+.tab_tare{width:200px;height:60px;}
+.tab_list td i{font-style:normal;color:#ff0000;}
+.save_btn{width:80px; height:30px;background: #ff6600; color: #fff;border:0;  -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+
